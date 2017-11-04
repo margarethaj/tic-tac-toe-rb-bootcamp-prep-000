@@ -1,4 +1,4 @@
-def display_board(board = board)
+def display_board(board)
   if(board != nil && board.any?)
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
     puts "-----------"
