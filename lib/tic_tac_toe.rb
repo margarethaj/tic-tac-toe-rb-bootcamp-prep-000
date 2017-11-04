@@ -47,12 +47,24 @@ def turn(board)
   display_board(board)
 end
 
+
 def turn_count(board)
-  board.count{|token| token == "X" || token == "0"}
+  counter = 0
+  board.each do |element|
+    if element == "X" || element == "O"
+      counter += 1
+    end
+  end
+  return counter
 end
 
 def current_player(board)
-  turn_count(board) % 2 == 0 ? "X" : "O"
+  counter = turn_count(board)
+  if counter % 2 == 0
+    return "X"
+  else
+    return "O"
+  end
 end
 
 WIN_COMBINATIONS = [
