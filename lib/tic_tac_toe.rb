@@ -37,18 +37,14 @@ def position_taken?(board, index)
 end
 
 def turn(board)
-  isValid = false
-  while isValid == false
-    puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    isValid = valid_move?(board, index)
-    if isValid
-      board = move(board, index, current_player(board))
-      display_board(board)
-    end
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if !valid_move?(board, index)
+    turn(board)
   end
-  return board
+  move(board, index, current_player(board))
+  display_board(board)
 end
 
 def turn_count(board)
