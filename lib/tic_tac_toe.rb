@@ -132,7 +132,7 @@ end
 
 def play(board)
   until over?(board) == true
-    turn(board)
+    board = turn(board)
     gameOver = over?(board)
   end
   if winner(board).nil? == false
