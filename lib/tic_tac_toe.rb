@@ -135,7 +135,7 @@ def play(board)
     gameOver = over?(board)
   end
   if winner(board) != false
-    puts "Congratulations ${winner(board)}!"
+    puts "Congratulations #{winner(board)}!"
   else
     puts "Cat\'s game"
   end
