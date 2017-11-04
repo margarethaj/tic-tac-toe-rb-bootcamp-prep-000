@@ -132,8 +132,8 @@ end
 def play(board)
   gameOver = false
   until gameOver == true
-    turn(board)
     gameOver = over?(board)
+    turn(board)
   end
   if winner(board) != false
     puts "Congratulations ${winner(board)}!"
