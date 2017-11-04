@@ -58,12 +58,7 @@ def turn_count(board)
 end
 
 def current_player(board)
-  counter = turn_count(board)
-  if counter % 2 == 0
-    return "X"
-  else
-    return "O"
-  end
+  if turn_count(board) % 2 == 0 ? "X" : "O"
 end
 
 WIN_COMBINATIONS = [
