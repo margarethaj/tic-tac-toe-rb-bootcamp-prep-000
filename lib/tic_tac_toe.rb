@@ -44,10 +44,11 @@ def turn(board)
     index = input_to_index(input)
     isValid = valid_move?(board, index)
     if isValid
-      move(board, index, current_player(board))
+      board = move(board, index, current_player(board))
       display_board(board)
     end
   end
+  return board
 end
 
 def turn_count(board)
